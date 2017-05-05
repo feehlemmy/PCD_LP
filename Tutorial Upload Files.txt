@@ -1,0 +1,22 @@
+Tutorial para enviar arquivos pro repositório:
+
+*Arquivos normais:
+1- Abra o Git Bash na pasta do projeto na sua máquina;
+2- Execute o comando git status
+	**Esse comando vai te retornar qual a situação da sua máquina em relação ao projeto;
+3- Execute o comando git pull
+	**Esse comando vai atualizar a sua pasta a partir do nosso repositório no GitHub;
+4- Execute o comando git add <arquivo>
+	**Esse comando vai preparar os arquivos com o nome informado para serem enviador pro repositório;
+5- Execute o comando git commit -m "<mensagem>"
+	**Entre as aspas, informe o que estará enviando pro repositório;
+6- Execute o comando git push origin
+	**Esse comando vai pedir  as suas credenciais e após digitá-las, ira enviar seus novos arquivos pro repositório;
+	
+	
+	
+*Código fonte:
+Antes de mais nada, limpe o seu projeto do Visual Studio C++, deixando somente os arquivos .h .cpp .sln .vcxproj e .vcxproj.filters.
+Após isso, marque a opção de Visualizar Itens Ocultos e remova todos os itens ocultos do projeto.
+
+Repetir todos os passos descritos para os arquivos normais.
