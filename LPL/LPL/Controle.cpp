@@ -11,7 +11,7 @@ Controle::~Controle()
 void Controle::gerenciarExecucao() {
 	InterfaceUsuario iu;
 
-	int Opcao, Retorno;
+	int Opcao, Retorno1, Retorno2;
 
 	do
 	{
@@ -20,11 +20,13 @@ void Controle::gerenciarExecucao() {
 		switch (Opcao)
 		{
 		case 1:
-			//Retorno chama o metodo de conceito
+			Retorno1 = iu.exibirMenuConceitos(); //Retorno chama o metodo de conceito
+			Retorno1 = iu.selecionarDificuldade();
 			break;
 
 		case 2:
-			//Retorno chama o metodo de exercicios
+			 Retorno2 = iu.exibirMenuExercicios(); //Retorno chama o metodo de exercicios
+			 Retorno2 = iu.selecionarDificuldade();
 			break;
 
 		case 3:

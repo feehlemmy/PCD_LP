@@ -4,6 +4,7 @@
 #include <iostream>
 using namespace std;
 #include <string>
+#include <locale.h>
 
 class InterfaceUsuario
 {
@@ -12,6 +13,10 @@ public:
 	~InterfaceUsuario();
 
 	int exibirMenuPrincipal(void);
+	int exibirMenuConceitos(void);
+	int exibirMenuExercicios(void);
+	int selecionarDificuldade(void);
+
 
 private:
 
