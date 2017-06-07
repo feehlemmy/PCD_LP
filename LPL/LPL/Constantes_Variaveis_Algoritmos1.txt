@@ -1,0 +1,27 @@
+					Agora Mostraremos  Exemplo de Algoritmo:
+Faça um algoritmo para calcular a expressão:
+S = A ^ 2 + 10 * B - C / 2,
+onde A, B, e C devem ser lidos (fornecidos).
+					Algoritmo Expressao
+	1 - [Início]
+	2 - [Declaração de Variáveis]
+	 S,A,B,C : real
+	3 - [Processamento]
+	 Leia (A,B,C)
+	 S <- A ^ 2 + 10 * B - C / 2
+	 Escreva (S)
+	4 - [Fim]
+					Para definir uma constante basta:
+2 - [Declaração de Constantes]
+ N = 10
+ A = True
+Vejam que constantes não tem tipos diferentes das variáveis.
+					Para declarar uma variável basta:
+Colocar o rótulo da variável seguido do tipo da mesma veja:
+2 - [Declaração de Variáveis]
+ A :inteiro
+ B :real
+ C :caracter
+ D :Booleana
+
+

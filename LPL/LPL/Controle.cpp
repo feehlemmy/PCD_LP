@@ -12,7 +12,7 @@ void Controle::gerenciarExecucao() {
 	InterfaceUsuario iu;
 
 	int Opcao, Retorno1, Retorno2;
-
+	iu.exibirTelaApresentacao();
 	do
 	{
 		Opcao = iu.exibirMenuPrincipal();
@@ -22,6 +22,7 @@ void Controle::gerenciarExecucao() {
 		case 1:
 			Retorno1 = iu.exibirMenuConceitos(); //Retorno chama o metodo de conceito
 			Retorno1 = iu.selecionarDificuldade();
+			iu.exibirConceito(Retorno1);
 			break;
 
 		case 2:

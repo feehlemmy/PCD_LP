@@ -1,4 +1,6 @@
 #include "InterfaceUsuario.h"
+#include <fstream>
+
 
 InterfaceUsuario::InterfaceUsuario()
 {
@@ -7,9 +9,21 @@ InterfaceUsuario::InterfaceUsuario()
 InterfaceUsuario::~InterfaceUsuario()
 {
 }
-
+void InterfaceUsuario::exibirTelaApresentacao(){
+	std::ifstream ifs("Tela_Apresentacao.txt", std::ifstream::binary);
+	std::filebuf* pbuf = ifs.rdbuf();
+	std::size_t size = pbuf->pubseekoff(0, ifs.end, ifs.in);
+	pbuf->pubseekpos(0, ifs.in);
+	char* buffer = new char[size];
+	pbuf->sgetn(buffer, size);
+	ifs.close();
+	std::cout.write(buffer, size);
+	delete[] buffer;
+	system("pause");
+}
 int InterfaceUsuario::exibirMenuPrincipal(void) {
 	int Opcao;
+	
 
 	while (true)
 	{
@@ -52,11 +66,9 @@ int InterfaceUsuario::exibirMenuConceitos(){
 		if ((Opcao >= 1) && (Opcao <= 4))
 		{
 			break;
-		}
-		else {
-			cout << "\nOpcao Invalida! Informe valores de 1 a 3." << endl;
+		}else{
+			cout << "\nOpcao Invalida! Informe valores de 1 a 4." << endl;
 			system("pause");
-			continue;
 		}
 	}
 	return Opcao;
@@ -108,9 +120,10 @@ int InterfaceUsuario::selecionarDificuldade(){
 		cin >> Opcao;
 
 
-		if ((Opcao >= 1) && (Opcao <= 4))
-		{
+		if ((Opcao >= 1)&& (Opcao <=3)){
+
 			break;
+
 		}
 		else {
 			cout << "\nOpcao Invalida! Informe valores de 1 a 3." << endl;
@@ -118,5 +131,58 @@ int InterfaceUsuario::selecionarDificuldade(){
 			continue;
 		}
 	}
+
 	return Opcao;
+}
+
+void InterfaceUsuario::exibirConceito(int Retorno1){
+	 
+	int Opcao, Controlador;
+	Opcao = Retorno1;
+	system("cls");
+	
+	if (Opcao == 1){
+		std::ifstream ifs("Constantes_Variaveis.txt", std::ifstream::binary);
+		std::filebuf* pbuf = ifs.rdbuf();
+		std::size_t size = pbuf->pubseekoff(0, ifs.end, ifs.in);
+		pbuf->pubseekpos(0, ifs.in);
+		char* buffer = new char[size];
+		pbuf->sgetn(buffer, size);
+		ifs.close();
+		std::cout.write(buffer, size);
+		delete[] buffer;
+	}
+	Controlador = 1;
+
+	if(Opcao == 2){
+		if (Controlador == 1)
+		{
+			    std::ifstream ifs("Constantes_Variaveis_Algoritmos.txt", std::ifstream::binary);
+				std::filebuf* pbuf = ifs.rdbuf();
+				std::size_t size = pbuf->pubseekoff(0, ifs.end, ifs.in);
+				pbuf->pubseekpos(0, ifs.in);
+				char* buffer = new char[size];
+				pbuf->sgetn(buffer, size);
+				ifs.close();
+				std::cout.write(buffer, size);
+				delete[] buffer;
+				system("pause");
+				Controlador = 2;
+			}
+			 if(Controlador ==2) {
+				std::ifstream ifs("Constantes_Variaveis_Algoritmos1.txt", std::ifstream::binary);
+				std::filebuf* pbuf = ifs.rdbuf();
+				std::size_t size = pbuf->pubseekoff(0, ifs.end, ifs.in);
+				pbuf->pubseekpos(0, ifs.in);
+				char* buffer = new char[size];
+				pbuf->sgetn(buffer, size);
+				ifs.close();
+				std::cout.write(buffer, size);
+				delete[] buffer;
+				
+			}
+			
+		
+	}
+	system("pause");
 }

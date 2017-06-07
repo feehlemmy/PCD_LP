@@ -1,0 +1,28 @@
+Antes de apresentar como são declarados as Constantes e as Variáveis em Algoritmos lembre se:
+ * A palavra inicial é sempre ALGORÍTMO, seguido de um nome.
+ * Os passos são numerados.
+ * Há um INÍCIO e um FIM claros.
+ * Os passos são comentados e escritos entre colchetes.
+ * Comandos que fazem parte de estruturas são GRIFADOS.
+ * Para maior clareza, usa-se denteação (endentação).
+						HIERARQUIA DOS OPERADORES
+ 1a. Parênteses.
+ 2a. Funções.
+ 3a. Potenciação.
+ 4a. Divisão, Multiplicação e Resto da divisão
+ inteira.
+ 5a. Adição e Subtração.
+ 6a. Operadores relacionais.
+ 7a. Operadores lógicos (Não, E, OU).
+						Instrução de Atribuição:
+ – Utilizado para atribuir um valor a uma variável.
+ – Representado por : <-
+					        Instrução de Entrada de Dados:
+ – Utilizado para se obter um valor de um dispositivo de entrada e armazená-lo em uma variável.
+ – Instrução: leia(<lista_variáveis>).
+						Instrução de Saída de Dados:
+ – Utilizado para se enviar um valor para um dispositivo de saída.
+ – Instrução: escreva(<lista _expressões>).
+
+ 
+

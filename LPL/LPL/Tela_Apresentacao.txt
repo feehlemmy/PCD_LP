@@ -1,0 +1,16 @@
+Bem Vindo ao Learning of Language!!!!
+
+Esse software tem como objetivo auxiliar no processo base da aprendizado de programação.
+Baseado na matéria de Tecnicas de Programação 1, vamos passar conceitos de:
+Constantes e Variáveis;
+Estruturas de Repetição;
+Estruturas de Seleção.
+O conteudo de aprendizado utilizado vem do livro 
+Lógica de Programação:a Construção de Algoritmos e Estruturas de Dados (3ª Edição) - Andre Luiz Villar Forbellone
+E do conteudo lecionado pelo professor Roberto Porto.
+
+Desenvolvedores:
+Carlos Christian Zanin
+Felipe Leme Simões Balestra
+Gabriel Rodrigo Martins da Silva
+
