@@ -18,6 +18,7 @@ public:
 	int exibirMenuExercicios(void);
 	int selecionarDificuldade(void);
 	void exibirConceito(int);
+	int exibirExercicios(int);
 
 
 private:
