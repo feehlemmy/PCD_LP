@@ -1,0 +1,28 @@
+Todo "Se" tem que ter obrigatoriamente um "Então " e um "Fim-Se", o "Senão" somente se houver necessidade
+
+Se opcao = 1
+ Então
+  Escreva(“Administração”)
+ Senão
+  Se opcao = 2
+   Então
+    Escreva(“Sistemas de Informação”)
+   Senão
+    Se opcao = 3
+     Então
+      Escreva(“Pedagogia”)
+     Senão
+	Escreva(“Opção Inválida!”) 
+      Fim-se
+    Fim-se
+ Fim-se
+
+Outra Opcão para Estruturas de Seleção é o escolha que por vezees é mais simples
+
+Escolha opcao
+ Caso 1: Escreva(“Administração”)
+ Caso 2: Escreva(“Sistemas de Informação”)
+ Caso 3: Escreva(“Pedagogia”)
+ Senão : Escreva(“Opção Inválida!”)
+Fim-Escolha
+

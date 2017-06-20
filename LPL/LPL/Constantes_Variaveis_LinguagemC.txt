@@ -1,0 +1,15 @@
+Para programar em C indicamos a IDE Code::Blocks disponivel em http://www.codeblocks.org/
+Antes de tudo para criar um arquivo C inclua o seguintes arquivo de cabeçalho
+#include <stdio.h>
+agora declare o main (função principal do programa)
+int main (){
+//código
+return 0; // COMO SEU MAIN PEDE UM RETORNO INT POR PADRÃO RETORNE 0
+}
+Para declarar as variaveis usaremos
+int A; // A tipo Inteiro
+float B; //B tipo Real
+char C // C tipo Caracter
+bool D // D do tipo booleana
+para constantes usaremos
+#define n 2;

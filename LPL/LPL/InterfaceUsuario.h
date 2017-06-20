@@ -16,7 +16,7 @@ public:
 	int exibirMenuPrincipal(void);
 	int exibirMenuConceitos(void);
 	int exibirMenuExercicios(void);
-	int selecionarDificuldade(void);
+	int selecionarDificuldade(int);
 	void exibirConceito(int);
 	int exibirExercicios(int);
 

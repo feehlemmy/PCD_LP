@@ -1,0 +1,28 @@
+// CALCULAR FATORIA USANDO ENQUANTO
+#include <stdio.h>
+int main(){
+  int n, i, fatorial;
+  printf("Entre o valor de n (0 <= n < 13): ");
+  scanf("%d", &n);
+  fatorial = 1;
+  i = 1;
+  while (i <= n) { //  Estrutura Enquanto, uso de chaves obrigatorio no inicio e no fim
+    fatorial = fatorial * i;
+    i++;                    /* equivalente a:    i = i + 1     */
+  } // Fim-Enquanto
+  printf("%d! = %d\n", n, fatorial);
+  return 0;
+}
+// CALCULAR FATORIA USANDO PARA
+#include <stdio.h>
+int main()
+{
+int fat, n;
+  printf("Insira um valor para o qual deseja calcular seu fatorial: ");
+  scanf("%d", &n);
+   for(fat = 1; n > 1; n = n - 1) {// Estrutura Para
+     fat = fat * n;
+   }
+   printf("\nFatorial calculado: %d", fat);
+   return 0;
+}

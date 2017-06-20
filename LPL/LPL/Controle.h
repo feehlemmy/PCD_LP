@@ -1,4 +1,4 @@
-#ifndef ControelH
+#ifndef ControleH
 #define ControleH
 //------------------------------
 #include "InterfaceUsuario.h"
@@ -15,4 +15,4 @@ private:
 };
 
 //------------------------------
-#endif // !ControelH
+#endif // ControleH

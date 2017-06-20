@@ -1,6 +1,9 @@
 #include "InterfaceUsuario.h"
+#include <iostream>
+using namespace std;
+#include <string>
+#include <locale.h>
 #include <fstream>
-
 
 InterfaceUsuario::InterfaceUsuario()
 {
@@ -23,7 +26,7 @@ void InterfaceUsuario::exibirTelaApresentacao(){
 }
 int InterfaceUsuario::exibirMenuPrincipal(void) {
 	int Opcao;
-	
+
 
 	while (true)
 	{
@@ -39,12 +42,13 @@ int InterfaceUsuario::exibirMenuPrincipal(void) {
 		{
 			break;
 
-			}else{
-				cout << "\nOpcao Invalida! Informe valores de 1 a 3." << endl;
-				system("pause");
-				continue;
-			}
-		
+		}
+		else{
+			cout << "\nOpcao Invalida! Informe valores de 1 a 3." << endl;
+			system("pause");
+			continue;
+		}
+
 
 	}
 	return Opcao;
@@ -66,14 +70,15 @@ int InterfaceUsuario::exibirMenuConceitos(){
 		if ((Opcao >= 1) && (Opcao <= 4))
 		{
 			break;
-		}else{
+		}
+		else{
 			cout << "\nOpcao Invalida! Informe valores de 1 a 4." << endl;
 			system("pause");
 		}
 	}
 	return Opcao;
 }
-	
+
 int InterfaceUsuario::exibirMenuExercicios(){
 	int Opcao = 0;
 
@@ -101,10 +106,10 @@ int InterfaceUsuario::exibirMenuExercicios(){
 			continue;
 		}
 	}
-	return Opcao;
+	return Opcao ;
 }
 
-int InterfaceUsuario::selecionarDificuldade(){
+int InterfaceUsuario::selecionarDificuldade(int Retorno1){
 	int Opcao = 0;
 
 	while (Opcao != 4)
@@ -114,13 +119,13 @@ int InterfaceUsuario::selecionarDificuldade(){
 		cout << "\n1- Basico" << endl;
 		cout << "\n2- Intermediario" << endl;
 		cout << "\n3- Avançado" << endl;
-		cout << "\n4- Retornar" << endl;
+		cout << "\n0- Retornar" << endl;
 
 		cout << "\nOpcao: ";
 		cin >> Opcao;
 
 
-		if ((Opcao >= 1)&& (Opcao <=4)){
+		if ((Opcao >= 0) && (Opcao <= 3)){
 
 			break;
 
@@ -128,36 +133,45 @@ int InterfaceUsuario::selecionarDificuldade(){
 		else {
 			cout << "\nOpcao Invalida! Informe valores de 1 a 3." << endl;
 			system("pause");
+			cout << "\nOpcao: ";
+			cin >> Opcao;
 			continue;
 		}
+	}
+	switch (Retorno1)
+	{
+	case 2: Opcao = Opcao + 3;
+		break;
+	case 3: Opcao = Opcao + 6;
+
 	}
 
 	return Opcao;
 }
 
 void InterfaceUsuario::exibirConceito(int Retorno1){
-	 
-	int Opcao, Controlador;
+
+	int Opcao, Controlador = 1;
 	Opcao = Retorno1;
 	system("cls");
-	
-	if (Opcao == 1){
-		std::ifstream ifs("Constantes_Variaveis.txt", std::ifstream::binary);
-		std::filebuf* pbuf = ifs.rdbuf();
-		std::size_t size = pbuf->pubseekoff(0, ifs.end, ifs.in);
-		pbuf->pubseekpos(0, ifs.in);
-		char* buffer = new char[size];
-		pbuf->sgetn(buffer, size);
-		ifs.close();
-		std::cout.write(buffer, size);
-		delete[] buffer;
-	}
-	Controlador = 1;
 
-	if(Opcao == 2){
-		if (Controlador == 1)
-		{
-			    std::ifstream ifs("Constantes_Variaveis_Algoritmos.txt", std::ifstream::binary);
+	if ((Opcao >= 1) && (Opcao <= 3)){
+		if (Opcao == 1){
+			std::ifstream ifs("Constantes_Variaveis.txt", std::ifstream::binary);
+			std::filebuf* pbuf = ifs.rdbuf();
+			std::size_t size = pbuf->pubseekoff(0, ifs.end, ifs.in);
+			pbuf->pubseekpos(0, ifs.in);
+			char* buffer = new char[size];
+			pbuf->sgetn(buffer, size);
+			ifs.close();
+			std::cout.write(buffer, size);
+			delete[] buffer;
+		}
+		Controlador = 1;
+
+		if (Opcao == 2){
+			if (Controlador == 1){
+				std::ifstream ifs("Constantes_Variaveis_Algoritmos.txt", std::ifstream::binary);
 				std::filebuf* pbuf = ifs.rdbuf();
 				std::size_t size = pbuf->pubseekoff(0, ifs.end, ifs.in);
 				pbuf->pubseekpos(0, ifs.in);
@@ -169,7 +183,7 @@ void InterfaceUsuario::exibirConceito(int Retorno1){
 				system("pause");
 				Controlador = 2;
 			}
-			 if(Controlador ==2) {
+			if (Controlador == 2) {
 				std::ifstream ifs("Constantes_Variaveis_Algoritmos1.txt", std::ifstream::binary);
 				std::filebuf* pbuf = ifs.rdbuf();
 				std::size_t size = pbuf->pubseekoff(0, ifs.end, ifs.in);
@@ -179,21 +193,88 @@ void InterfaceUsuario::exibirConceito(int Retorno1){
 				ifs.close();
 				std::cout.write(buffer, size);
 				delete[] buffer;
-				
 			}
-			
-		
+		}
+		if (Opcao == 3){
+			if (Controlador == 1){
+				std::ifstream ifs("Constantes_Variaveis_LinguagemC.txt", std::ifstream::binary);
+				std::filebuf* pbuf = ifs.rdbuf();
+				std::size_t size = pbuf->pubseekoff(0, ifs.end, ifs.in);
+				pbuf->pubseekpos(0, ifs.in);
+				char* buffer = new char[size];
+				pbuf->sgetn(buffer, size);
+				ifs.close();
+				std::cout.write(buffer, size);
+				delete[] buffer;
+				system("pause");
+				Controlador = 2;
+			}
+			if (Controlador == 2) {
+				system("cls");
+				std::ifstream ifs("Constantes_Variaveis_LinguagemC2.txt", std::ifstream::binary);
+				std::filebuf* pbuf = ifs.rdbuf();
+				std::size_t size = pbuf->pubseekoff(0, ifs.end, ifs.in);
+				pbuf->pubseekpos(0, ifs.in);
+				char* buffer = new char[size];
+				pbuf->sgetn(buffer, size);
+				ifs.close();
+				std::cout.write(buffer, size);
+				delete[] buffer;
+
+			}
+		}
 	}
+	if ((Opcao >= 4) && (Opcao <=6)){
+
+	
+	if (Opcao ==4){
+		system("cls");
+		std::ifstream ifs("Estruturas_de_Selecao.txt", std::ifstream::binary);
+		std::filebuf* pbuf = ifs.rdbuf();
+		std::size_t size = pbuf->pubseekoff(0, ifs.end, ifs.in);
+		pbuf->pubseekpos(0, ifs.in);
+		char* buffer = new char[size];
+		pbuf->sgetn(buffer, size);
+		ifs.close();
+		std::cout.write(buffer, size);
+		delete[] buffer;
+	}
+	if (Opcao ==5){
+		system("cls");
+		std::ifstream ifs("Estruturas_de_Selecao_Algoritmo.txt", std::ifstream::binary);
+		std::filebuf* pbuf = ifs.rdbuf();
+		std::size_t size = pbuf->pubseekoff(0, ifs.end, ifs.in);
+		pbuf->pubseekpos(0, ifs.in);
+		char* buffer = new char[size];
+		pbuf->sgetn(buffer, size);
+		ifs.close();
+		std::cout.write(buffer, size);
+		delete[] buffer;
+	}
+
+	   if (Opcao == 6){
+		system("cls");
+		std::ifstream ifs("Estruturas_de_Selecao_LinguagemC.txt", std::ifstream::binary);
+		std::filebuf* pbuf = ifs.rdbuf();
+		std::size_t size = pbuf->pubseekoff(0, ifs.end, ifs.in);
+		pbuf->pubseekpos(0, ifs.in);
+		char* buffer = new char[size];
+		pbuf->sgetn(buffer, size);
+		ifs.close();
+		std::cout.write(buffer, size);
+		delete[] buffer;
+	}
+}
 	system("pause");
 }
 int InterfaceUsuario::exibirExercicios(int Retorno2){
 	system("cls");
-	int Opcao = Retorno2,Pontos = 0;
+	int Opcao = Retorno2, Pontos = 0;
 	int Resposta;
 
 	switch (Opcao)
 	{
-	case 1: 
+	case 1:
 		cout << "Qual a Diferença entre Variáveis e Constantes?" << endl;
 		cout << "1) A constante ao ser declarada precisa informar seu tipo Variável não." << endl;
 		cout << "2)A Variável pode ter seu Valor alterado pelo Usuario e a Constante não." << endl;
@@ -214,7 +295,7 @@ int InterfaceUsuario::exibirExercicios(int Retorno2){
 			break;
 		case 3:
 			cout << "Resposta Errada" << endl;
-			system("pause"); 
+			system("pause");
 			break;
 		}
 		cout << "Quando se deve usar uma Váriavel do tipo Inteiro?" << endl;
@@ -244,8 +325,8 @@ int InterfaceUsuario::exibirExercicios(int Retorno2){
 
 		break;
 	}
-	
-	cout <<"Sua pontuação no nível básico sobre Variáveis e Constantes é: "<< Pontos << endl;
+
+	cout << "Sua pontuação no nível básico sobre Variáveis e Constantes é: " << Pontos << endl;
 	system("pause");
 	return Pontos;
 

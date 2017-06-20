@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main (){
+	int num;
+	printf ("Digite um numero: ");
+	scanf ("%d",&num);
+	if (num==10) //SE
+      	{ // Uso de Chaves obrigatorio ao iniciar o desvio
+      		printf ("O numero e igual a 10.\n");
+      	} // Ao terminar também
+	else  // Senão
+      	{ // Chave Obrigatoria ao iniciar o desvio
+      		printf ("O numero e diferente de 10.\n");
+      	} // Ao finalizar também
+	return(0);
+}
+int main (){
+	int num;
+	printf ("Digite um numero: ");
+	scanf ("%d",&num);
+	switch (num) { // Escolha
+        	case 9: // Caso 9
+                	printf ("\n\nO numero e igual a 9.\n");
+        	break;
+        	case 10: // Caso 10
+                	printf ("\n\nO numero e igual a 10.\n");
+        	break;
+        	case 11: //Caso 11
+                	printf ("\n\nO numero e igual a 11.\n");
+        	break;
+        }
+	return(0);
+}

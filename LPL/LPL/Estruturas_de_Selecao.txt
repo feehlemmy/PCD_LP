@@ -1,0 +1,6 @@
+ Estrutura de seleção (expressão condicional ou ainda construção condicional) é, na ciência da computação,
+ uma estrutura de desvio do fluxo de controle presente em linguagens de programação 
+ que realiza diferentes computações ou ações dependendo se a seleção (ou condição) é verdadeira ou falsa,
+ em que a expressão é processada e transformada em um valor booleano. Nas linguagens de programação,
+ usamos as palavras em inglês para expressar uma estrutura de seleção, como if (SE), else(SENÃO).
+

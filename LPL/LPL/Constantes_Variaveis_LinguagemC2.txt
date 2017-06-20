@@ -1,0 +1,12 @@
+Agora um exemplo de programa em C
+#include <stdio.h> // Cabeçalho
+#define N 2; // Constante N = 2
+int main(){ // Inicio do programa
+    int A; //Declaração da Variável A do tipo inteira
+    A = 10; // Variável A recebe 10
+    A = A/N; // Variável A recebe A divído por N (10 /5)
+    printf("o Valor de A e: %i",A); // Escreve na tela o valor de A
+    getchar(); // Espera o usuário apertar alguma tecla para acabar o processamento
+return 0; // Retorna 0 por padrão para função int main
+} // Fim do Processamento
+

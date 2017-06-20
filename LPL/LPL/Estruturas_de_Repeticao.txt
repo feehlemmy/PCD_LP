@@ -1,0 +1,24 @@
+Repetição pré-testada: Nesta estrutura, a condição é primeiramente verificada,
+ e se for verdadeira o bloco é executado. No final de execução do bloco a condição é novamente testada.
+X <- 1
+Enquanto X <= 10 Faça
+Escreva (X)
+X <- X + 1
+Fim-Enquanto
+
+A construção "repita até" (também chamada "repetição pós-testada") é uma variação da construção anterior,
+ e difere pois a verificação da condição é feita após uma execução do bloco. Sua estrutura básica é a seguinte:
+X <- 1
+Repita
+Escreva (X)
+X <- X + 1
+Até X > 10
+Nesta estrutura, o bloco de código é primeiramente executado, e então a condição é verificada, 
+e se for verdadeira o bloco é executado novamente.
+
+Repetição com variável de controle: A construção "para" (ou "repetição com variável de controle") 
+é uma estrutura de repetição que designa uma variável de controle para cada iteração do bloco, 
+e uma operação de passo a cada iteração. Sua estrutura básica é a seguinte:
+Para X <- 1 Ate 10 Faca
+Escreva (X)
+Fim-Para

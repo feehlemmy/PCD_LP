@@ -21,13 +21,13 @@ void Controle::gerenciarExecucao() {
 		{
 		case 1:
 			Retorno1 = iu.exibirMenuConceitos(); //Retorno chama o metodo de conceito
-			Retorno1 = iu.selecionarDificuldade();
+			Retorno1 = iu.selecionarDificuldade(Retorno1);
 			iu.exibirConceito(Retorno1);
 			break;
 
 		case 2:
 			 Retorno2 = iu.exibirMenuExercicios(); //Retorno chama o metodo de exercicios
-			 Retorno2 = iu.selecionarDificuldade();
+			 Retorno2 = iu.selecionarDificuldade(Retorno2);
 			 Pontuacao = Pontuacao + iu.exibirExercicios(Retorno2);
 			 cout << Pontuacao << endl;
 			break;
